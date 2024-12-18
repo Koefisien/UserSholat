@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Panel</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Feather Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>User Panel</h1>
+    </div>
+    <form id="user-form">
+      <div class="form-group">
+        <label for="user-name">Nama</label>
+        <div class="input-container">
+          <i data-feather="user"></i>
+          <input type="text" id="user-name" placeholder="Masukkan nama Anda">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="user-class">Kelas</label>
+        <div class="input-container">
+          <i data-feather="book"></i>
+          <select id="user-class">
+            <option value="">Pilih Kelas</option>
+            <!-- Options -->
+            <option value="10A">10 A</option>
+            <option value="10B">10 B</option>
+            <!-- Tambahkan opsi lainnya di sini -->
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="user-token">Token</label>
+        <div class="input-container">
+          <i data-feather="key"></i>
+          <input type="text" id="user-token" placeholder="Masukkan token">
+        </div>
+      </div>
+      <button type="button" class="btn" id="submit-token-btn">
+        <i data-feather="check-circle"></i>
+        Submit
+      </button>
+    </form>
+  </div>
+
+  <!-- Custom Dialog -->
+  <div class="dialog-overlay" id="dialog-overlay"></div>
+  <div class="dialog" id="custom-dialog">
+    <h2 id="dialog-title"></h2>
+    <p id="dialog-message"></p>
+    <button class="btn" id="dialog-close-btn">OK</button>
+  </div>
+
+  <!-- External JavaScript -->
+  <script type="module" src="scripts.js"></script>
+</body>
+</html>
